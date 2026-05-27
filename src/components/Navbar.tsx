@@ -45,7 +45,7 @@ export default function Navbar() {
                 alt="GGO Informática"
                 width={200}
                 height={80}
-                className="w-auto h-16 object-contain"
+                className="w-auto h-12 md:h-16 object-contain"
                 priority
               />
             </div>
