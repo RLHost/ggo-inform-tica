@@ -1,0 +1,17 @@
+# GGO Informática
+
+GGO Informática é uma empresa especializada em suporte de TI de excelência, manutenção de computadores, servidores e infraestrutura de redes.
+
+## Serviços
+- Manutenção Preventiva e Corretiva
+- Suporte Técnico Remoto e Presencial
+- Gestão de Servidores e Redes
+- Segurança da Informação e Backups
+
+## Contato
+- Telefone/WhatsApp: +55 41 9999-9999
+- Site: https://ggoinformatica.com.br
+- Localização: Curitiba, PR - Brasil
+
+## Sobre
+Nosso foco é garantir que a tecnologia da sua empresa funcione sem interrupções, oferecendo soluções personalizadas e suporte de alta qualidade.
