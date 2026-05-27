@@ -43,9 +43,9 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ type: "spring", stiffness: 50, delay: 0.2 }}
-            className="lg:w-1/2 relative"
+            className="w-full lg:w-1/2 relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[500px] group">
+            <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl h-[350px] md:h-[500px] group">
               <Image 
                 src="/about_datacenter.jpg" 
                 alt="Parque Tecnológico e Data Center" 
@@ -56,9 +56,9 @@ export default function About() {
             </div>
             
             <div 
-              className="absolute -bottom-8 -right-8 bg-brand-blue text-white p-8 rounded-2xl shadow-xl hidden md:block"
+              className="absolute -bottom-6 -right-2 md:-bottom-8 md:-right-8 bg-brand-blue text-white p-6 md:p-8 rounded-2xl shadow-xl"
             >
-              <p className="text-4xl font-bold mb-1">+10</p>
+              <p className="text-3xl md:text-4xl font-bold mb-1">+10</p>
               <p className="text-sm font-medium text-blue-200">Anos de<br/>Experiência</p>
             </div>
           </motion.div>
