@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const slides = [
   {
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80",
+    image: "/hero_1.jpg",
     badge: "Suporte Técnico de Excelência",
     title: (
       <>
@@ -17,7 +17,7 @@ const slides = [
     description: "A GGO Informática oferece manutenção preventiva, infraestrutura segura e suporte rápido para que sua empresa nunca pare de faturar por problemas de TI."
   },
   {
-    image: "https://images.unsplash.com/photo-1605041197572-1dcedff5655e?auto=format&fit=crop&w=1920&q=80",
+    image: "/hero_2.jpg",
     badge: "Eficiência e Segurança",
     title: (
       <>
@@ -27,7 +27,7 @@ const slides = [
     description: "Implementamos sistemas de ponta e realizamos visitas preventivas, evitando falhas críticas e perda de dados, mantendo seu negócio 100% focado no crescimento."
   },
   {
-    image: "https://images.unsplash.com/photo-1694857807827-cd901ede9ba4?auto=format&fit=crop&w=1920&q=80",
+    image: "/hero_3.jpg",
     badge: "Hardware Otimizado",
     title: (
       <>

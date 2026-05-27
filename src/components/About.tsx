@@ -47,7 +47,7 @@ export default function About() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[500px] group">
               <Image 
-                src="https://images.unsplash.com/photo-1657653464846-e58296bcb8be?auto=format&fit=crop&w=800&q=80" 
+                src="/about_datacenter.jpg" 
                 alt="Parque Tecnológico e Data Center" 
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"

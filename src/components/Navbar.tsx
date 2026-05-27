@@ -44,8 +44,8 @@ export default function Navbar() {
                 src="/logo_ggo_horiz.png"
                 alt="GGO Informática"
                 width={200}
-                height={60}
-                className="w-auto h-12 object-contain"
+                height={80}
+                className="w-auto h-16 object-contain"
                 priority
               />
             </div>

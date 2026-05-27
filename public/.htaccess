@@ -1,0 +1,77 @@
+# ----------------------------------------------------------------------
+# SEGURANÇA E OTIMIZAÇÃO - GGO INFORMÁTICA
+# ----------------------------------------------------------------------
+
+# 1. Desabilitar listagem de diretórios (Segurança)
+Options -Indexes
+
+# 2. Esconder arquivos sensíveis e configurações (.env, .git, .htaccess, etc)
+<FilesMatch "^\.|\.env|package\.json|package-lock\.json|next\.config\.js|tsconfig\.json">
+    Require all denied
+</FilesMatch>
+
+# 3. Forçar HTTPS (Redireciona HTTP para HTTPS)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# 4. Configuração de Roteamento para Next.js (Static Export)
+# Se você for usar 'npm run build' e exportar o site estático para a hospedagem
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Se o arquivo existir, serve ele
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Se terminar sem .html e existir a versão .html, serve a versão html internamente
+    RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+    RewriteRule ^(.*)$ $1.html [L]
+
+    # Redireciona tudo que não for encontrado para o index.html (SPA Fallback)
+    RewriteRule ^ index.html [QSA,L]
+</IfModule>
+
+# 5. Cabeçalhos de Segurança (Security Headers)
+<IfModule mod_headers.c>
+    # Impede ataques de Clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Previne que o navegador tente adivinhar o tipo de arquivo
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Ativa filtro XSS integrado dos navegadores
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Controla as informações de referência passadas para outros sites
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Strict-Transport-Security (HSTS) - Força conexões seguras no navegador por 1 ano
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# 6. Otimização e Cache de Arquivos Estáticos (Browser Caching)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Imagens, CSS, JS e Fontes (Cache por 1 ano)
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    
+    # HTML (Não fazer cache agressivo para sempre atualizar o site ao publicar)
+    ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Ativar compressão GZIP para textos, scripts e css
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
