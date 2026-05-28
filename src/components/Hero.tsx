@@ -93,6 +93,7 @@ export default function Hero() {
             />
           </motion.div>
         </AnimatePresence>
+        <div className="absolute inset-0 bg-black/40 z-[5]"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/95 via-brand-blue/80 to-transparent mix-blend-multiply z-10"></div>
         {/* Glow effect overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/40 via-transparent to-transparent z-10 opacity-70 blur-3xl mix-blend-overlay pointer-events-none"></div>
