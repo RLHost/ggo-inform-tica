@@ -6,10 +6,10 @@ import Image from 'next/image';
 
 export default function About() {
   const benefits = [
-    'Visitas periódicas para manutenção preventiva',
-    'Perfil de atendimento personalizado',
-    'Serviços com qualidade, rapidez e baixo custo',
-    'Vasta experiência na gestão de infraestrutura de TI'
+    'Visitas periódicas para manutenção preventiva e monitoramento contínuo',
+    'Perfil de atendimento personalizado para cada necessidade empresarial',
+    'Serviços ágeis: de reparos em computadores a servidores e backup em nuvem',
+    'Vasta experiência na gestão e otimização de infraestrutura de TI'
   ];
 
   return (
@@ -72,13 +72,13 @@ export default function About() {
           >
             <h2 className="text-brand-accent font-bold tracking-wider uppercase text-sm mb-2">Sobre a GGO Informática</h2>
             <h3 className="text-3xl md:text-4xl font-bold text-brand-blue mb-6 leading-tight">
-              Protegemos o Motor Tecnológico do Seu Negócio
+              Soluções Completas para a Evolução Tecnológica do Seu Negócio
             </h3>
             <p className="text-slate-600 text-lg mb-6 leading-relaxed">
-              A GGO Informática nasceu com um propósito claro: acabar com a frustração de empresas que sofrem com equipamentos lentos e redes instáveis. Liderada por <strong>Gilberto Gomide</strong>, que detém profundo conhecimento técnico e vasta experiência profissional, nossa equipe aplica as melhores práticas do mercado para proteger a sua infraestrutura e garantir o andamento ágil do seu trabalho.
+              A GGO Informática nasceu com um propósito claro: acabar com a frustração de empresas que sofrem com problemas de TI, desde equipamentos lentos até redes instáveis e vulnerabilidade de dados. Liderada por <strong>Gilberto Gomide</strong>, que detém profundo conhecimento técnico e vasta experiência, nossa equipe aplica as melhores práticas do mercado para modernizar, proteger e gerenciar toda a sua infraestrutura—incluindo servidores, backup em nuvem, telefonia PABX e workstations de alto desempenho.
             </p>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-              Não somos apenas técnicos de informática. Somos parceiros estratégicos que realizam análises completas, instalam os programas certos e garantem que sua equipe foque no que importa: crescer a empresa.
+              Não somos apenas suporte técnico. Somos parceiros estratégicos de tecnologia. Realizamos análises completas e entregamos soluções sob medida para que sua operação nunca pare e sua equipe foque apenas no que importa: o crescimento contínuo da sua empresa.
             </p>
             
             <ul className="space-y-4 mb-8">

@@ -3,10 +3,13 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -16,6 +19,12 @@ export default function Navbar() {
 
   const scrollToSection = (id: string) => {
     setIsOpen(false);
+    
+    if (pathname !== '/') {
+      router.push(`/#${id}`);
+      return;
+    }
+
     setTimeout(() => {
       const element = document.getElementById(id);
       if (element) {
