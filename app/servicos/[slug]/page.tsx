@@ -53,8 +53,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       </section>
 
       {/* Content Section - Descrição */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white my-16 shadow-sm border-y border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-blue mb-4">
               Por que escolher nossa solução?
@@ -71,8 +71,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-slate-50 border-t border-slate-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white my-16 shadow-sm border-y border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-brand-blue mb-4">O que está incluído</h2>
             <p className="text-slate-600">Confira as entregas principais deste serviço.</p>
@@ -90,7 +90,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-24 bg-brand-blue text-white">
+      <section className="py-24 bg-brand-blue text-white my-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Principais Benefícios</h2>
@@ -109,7 +109,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white my-16 shadow-sm border-y border-slate-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
             Pronto para otimizar sua TI?
@@ -128,7 +128,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
       </section>
 
       {/* Outros Serviços Navegação */}
-      <section className="py-20 bg-slate-50 border-t border-slate-200">
+      <section className="py-20 bg-slate-50 my-16 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-4">
             <div className="text-center md:text-left">
